@@ -39,6 +39,7 @@ group :doc do
 end
 
 gem 'pg', '0.12.2'
+gem 'factory_girl_rails', '4.2.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

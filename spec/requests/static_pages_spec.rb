@@ -8,10 +8,8 @@ describe "StaticPages" do
     before { visit root_path }
 
     it { should have_content('Web App') }
-    it { should have_selector('title',
-                   text: " ") }
-    it { should_not have_selector('title',
-                   text: "Ruby on Rails Tutorial Web App | Home") }
+    it { should have_selector('title', text: " ") }
+    it { should_not have_selector('title', text: "Ruby on Rails Tutorial Web App | Home") }
   end
 
   describe "Help page" do

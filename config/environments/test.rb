@@ -32,5 +32,10 @@ WebApp::Application.configure do
   config.action_mailer.delivery_method = :test
 
   # Print deprecation notices to the stderr.
+  # Speed up tests by lowering BCrypt's cost function.
   config.active_support.deprecation = :stderr
+   require 'bcrypt'
+  silence_warnings do
+    BCrypt::Engine::DEFAULT_COST = BCrypt::Engine::MIN_COST
+  end
 end
